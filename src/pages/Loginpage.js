@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-
+import asset1 from '../assets/asset1.svg'
+import asset2 from '../assets/asset2.svg'
 export default function LoginPage() {
 
     const [ldapid, setLdap] = React.useState();
@@ -22,7 +23,7 @@ export default function LoginPage() {
             <div className="flex overflow-hidden relative flex-col justify-center items-center px-16 py-20 w-full fill-sky-950 min-h-[1024px] max-md:px-5 max-md:max-w-full">
                 <img
                     loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/44f8b1e5916572cab262feadde4f7411c00f55b084886cd97068d531b6c71cfc?"
+                    src={asset1}
                     className="object-cover absolute inset-0 size-full"
                 />
                 <div className="flex relative flex-col mb-56 w-full max-w-[1165px] max-md:mb-10 max-md:max-w-full">
@@ -34,7 +35,7 @@ export default function LoginPage() {
                             <div className="flex flex-col w-[56%] max-md:ml-0 max-md:w-full">
                                 <img
                                     loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/f55e8c52d11e6f153d1c8e87fa6cbc65f7f81930fbaab1fcd0fd211f0ba9e217?"
+                                    src={asset2}
                                     className="w-full aspect-[1.37] max-md:mt-10 max-md:max-w-full"
                                 />
                             </div>
