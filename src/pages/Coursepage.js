@@ -1,7 +1,7 @@
 import * as React from "react";
 import HoverRating from "../Components/rating";
 import logo from "../assets/Title.png"
-import Footer2 from "../Components/footer2";
+import Footer from "../Components/footer";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Rating from '@mui/material/Rating';
@@ -194,7 +194,7 @@ function Coursepage() {
 
 
       </div>
-      <Footer2></Footer2>
+      <Footer></Footer>
     </div>
   );
 }

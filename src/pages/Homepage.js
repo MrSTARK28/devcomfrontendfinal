@@ -88,7 +88,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <div className="justify-center self-start py-3 mt-28 ml-32 text-4xl font-bold text-black whitespace-nowrap max-md:mt-10 max-md:ml-2.5">
+      {/* <div className="justify-center self-start py-3 mt-28 ml-32 text-4xl font-bold text-black whitespace-nowrap max-md:mt-10 max-md:ml-2.5">
         Top rated courses
       </div>
       <div class="flex flex-col justify-center p-5 mt-6 w-full text-black rounded-none shadow-sm  max-w-[1200px] max-md:max-w-full border-l-4 border-sky-950">
@@ -124,7 +124,7 @@ function Home(props) {
           }) : ""
         }
 
-      </div>
+      </div> */}
       <Footer class="max-w-[1920px]" ></Footer>
     </div>
 

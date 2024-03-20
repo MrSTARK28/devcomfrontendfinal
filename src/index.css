@@ -17,6 +17,7 @@
 }
 .g2{
     margin-left: 0%;
+    left:0%
 }
 .g4{
     margin-left: 0%;
@@ -39,7 +40,7 @@
     justify-content: center;
     scale: 0.5;
 }
-.mainfooter{
-    
-}
 
+.login-scroll {
+    overflow: hidden;
+}

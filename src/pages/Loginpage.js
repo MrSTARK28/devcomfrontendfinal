@@ -2,24 +2,41 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import asset1 from '../assets/asset1.svg'
 import asset2 from '../assets/asset2.svg'
+import axios from "axios";
+
 export default function LoginPage() {
 
-    const [ldapid, setLdap] = React.useState();
-    const [password, setPassword] = React.useState();
+    const [email, setEmail] = React.useState("");
+    const [password, setPassword] = React.useState("");
     const navigate = useNavigate();
 
     const handlename = (event) => {
-        setLdap(event.target.value);
+        setEmail(event.target.value);
     }
     const handlepassword = (event) => {
         setPassword(event.target.value);
     }
-    const handlehomepage = (() => {
-        navigate("/");
-    })
+    const handleLogin = (e) => {
+        e.preventDefault();
+        axios
+          .post("http://127.0.0.1:8000/users/login/", {
+            email,
+            password,
+          })
+          .then((res) => {
+            navigate("/homepage");
+          })
+          .catch((error) => {
+            console.log("Login failed:", error);
+          });
+        console.log(email);
+        console.log(password);
+        setEmail("");
+        setPassword("");
+      };
 
     return (
-        <div className="flex flex-col justify-center bg-white">
+        <div className="login-scroll flex flex-col justify-center bg-white">
             <div className="flex overflow-hidden relative flex-col justify-center items-center px-16 py-20 w-full fill-sky-950 min-h-[1024px] max-md:px-5 max-md:max-w-full">
                 <img
                     loading="lazy"
@@ -43,11 +60,11 @@ export default function LoginPage() {
                                 <div className="flex flex-col grow px-12 py-12 mt-2 w-full text-lg text-black bg-white rounded-lg border border-solid shadow-sm border-neutral-200 max-md:px-5 max-md:mt-10 max-md:max-w-full">
                                     <div>LDAP Id</div>
                                     <input
-                                        id="ldapid"
+                                        id="email"
                                         type="text"
-                                        value={ldapid}
+                                        value={email}
                                         onChange={handlename}
-                                        name="ldapid"
+                                        name="email"
                                         placeholder="Enter your LDAP ID"
                                         className="justify-center px-4 py-3.5 mt-2 rounded-md border border-solid border-zinc-400 text-zinc-500"
                                     />
@@ -63,14 +80,15 @@ export default function LoginPage() {
                                     />
 
 
-                                    <div class="flex items-center mb-4">
-                                        <input id="default-checkbox" type="checkbox" value="" class="shrink-0 w-3.5 h-3.5 rounded-sm border border-solid border-zinc-400"/>
+                                    <div className="flex items-center mb-4">
+                                        <input id="default-checkbox" type="checkbox" value="" className="shrink-0 w-3.5 h-3.5 rounded-sm border border-solid border-zinc-400"/>
                                         <div className="flex-auto">Remember me on this device</div>
                                     </div>
 
-                                    <div className="justify-center items-center px-16 py-3.5 mt-10 text-center text-white bg-cyan-600 rounded-md max-md:px-5" onClick={handlehomepage}>
+                                    <button type="submit" className="justify-center items-center px-16 py-3.5 mt-10 text-center text-white bg-cyan-600 rounded-md max-md:px-5" onSubmit={handleLogin}>
                                         Log in
-                                    </div>
+                                    </button>
+                                    
                                     <div className="self-center mt-14 text-sm max-md:mt-10" onClick={() => {
                                         alert("Forgot Password")
                                     }}>
