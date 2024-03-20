@@ -42,7 +42,7 @@ function Coursepage() {
         "Content-Type": "application/json",
       };
 
-      axios.get('http://127.0.0.1:8000/dept', { headers }).then(res => res).then(data => {
+      axios.get('http://127.0.0.1:8000/dept/', { headers }).then(res => res).then(data => {
         setDept(data.data.departments);
         console.log(data.data.departments);
         axios.get('http://127.0.0.1:8000/' + url.substring(22), { headers }).then(res => {
@@ -81,7 +81,7 @@ function Coursepage() {
           <Link to="../"><img
             loading="lazy"
             src={logo}
-            className="my-auto  w-[500px] max-md:max-w-full"
+         //   className="my-auto  w-[500px] max-md:max-w-full"
           />
           </Link>
           <div className="flex gap-5 justify-between items-center max-md:flex-wrap max-md:max-w-full">
@@ -95,7 +95,7 @@ function Coursepage() {
                 <div>Department</div>
               </Link>
             </div>
-            <div className="self-stretch my-auto">Statistics</div>
+           
           </div>
         </div>
       </div>

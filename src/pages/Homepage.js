@@ -14,23 +14,23 @@ function Home(props) {
       const headers = {
         "Content-Type": "application/json",
       };
-      axios.get('http://127.0.0.1:8000/dept', { headers }).then(res => res).then(data => {
+      axios.get('http://127.0.0.1:8000/dept/', { headers }).then(res => res).then(data => {
         setDept(data.data.departments);
         console.log(data.data.departments)
       });
     };
 
-    const TokenData2 = () => {
-      const headers = {
-        "Content-Type": "application/json",
-      };
-      axios.get('http://127.0.0.1:8000/dept/184/top_courses', { headers }).then(res => res).then(data => {
-        setTopCourses(data.data.top_courses);
-        console.log(data.data.top_courses)
-      });
-    };
+    // const TokenData2 = () => {
+    //   const headers = {
+    //     "Content-Type": "application/json",
+    //   };
+    //   axios.get('http://127.0.0.1:8000/dept/158/top_courses', { headers }).then(res => res).then(data => {
+    //     setTopCourses(data.data.top_courses);
+    //     console.log(data.data.top_courses)
+    //   });
+    // };
     TokenData();
-    TokenData2();
+   // TokenData2();
   }, []);
 
   return (

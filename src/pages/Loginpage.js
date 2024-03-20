@@ -24,10 +24,11 @@ export default function LoginPage() {
             password,
           })
           .then((res) => {
-            navigate("/homepage");
+            navigate("/");
           })
           .catch((error) => {
             console.log("Login failed:", error);
+            alert("invalid login credentials")
           });
         console.log(email);
         console.log(password);
@@ -85,7 +86,7 @@ export default function LoginPage() {
                                         <div className="flex-auto">Remember me on this device</div>
                                     </div>
 
-                                    <button type="submit" className="justify-center items-center px-16 py-3.5 mt-10 text-center text-white bg-cyan-600 rounded-md max-md:px-5" onSubmit={handleLogin}>
+                                    <button type="submit" className="justify-center items-center px-16 py-3.5 mt-10 text-center text-white bg-cyan-600 rounded-md max-md:px-5" onClick={handleLogin}>
                                         Log in
                                     </button>
                                     
