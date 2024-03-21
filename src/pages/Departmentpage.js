@@ -19,6 +19,7 @@ import img6 from "../Components/images/Department-card3.svg" // civil
 import img7 from "../Components/images/Department-card.svg" // chea 
 import img8 from "../Components/images/DepartmentCard8.svg" // phy 
 import { Link } from 'react-router-dom';
+import Footer from '../Components/footer';
 
 // import DeptCard from "./Components/DeptCard"
 //  import DeptDetail from "./Components/DeptDetail"
@@ -92,18 +93,17 @@ export default function Department(){
       setFilteredRows(courses.map(item => createData(item.name, item.average_rating)));
     };
   return(
-    <div>
-         <div className="flex flex-col items-center bg-white">
-      <div className="flex justify-center items-center self-stretch px-16 py-5 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
-        <div className="flex gap-5 justify-between w-full max-w-[100px] max-md:flex-wrap max-md:max-w-full"></div>
-         <Link to="../"><img
+        <div>
+          <div className="flex justify-center items-center self-stretch px-16 py-5 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
+        <div className="flex gap-5 justify-between w-full max-w-[1200px] max-md:flex-wrap max-md:max-w-full">
+          <Link to="../"><img
             loading="lazy"
             src={logo}
             className="my-auto  w-[500px] max-md:max-w-full"
           />
           </Link>
           <div className="flex gap-5 justify-between items-center max-md:flex-wrap max-md:max-w-full">
-            <div className="self-stretch my-auto">
+            <div className="self-stretch my-auto" >
               <Link to="../">
                 <div>Home</div>
               </Link>
@@ -113,13 +113,12 @@ export default function Department(){
                 <div>Department</div>
               </Link>
             </div>
-            
           </div>
         </div>
-      </div>    
+      </div>
         <>
-      <div>
-        <table style={{ height: 200, marginTop: -10 }}>
+      <div className='pt-5 '>
+        <table style={{ height: 200, marginTop: -10, padding: 100, }}>
           <tr>
             <th><button style={{border:'none'}} onClick={() => handleDepartment('158')}><img src={img1}></img></button></th>
             <th><button style={{border:'none'}} onClick={() => handleDepartment('159')}><img src={img6}></img></button></th>
@@ -186,6 +185,7 @@ export default function Department(){
         />
       </Paper>
     </>
+    <Footer class="max-w-[1920px]" ></Footer>
     </div>
   )
 }
