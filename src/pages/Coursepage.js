@@ -5,7 +5,8 @@ import Footer from "../Components/footer";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Rating from '@mui/material/Rating';
-
+import img10 from "../Components/images/footer.jpg"
+import img11 from "../Components/images/feedback.jpg"
 function Coursepage() {
 
   const [code, setCode] = React.useState(0);
@@ -192,9 +193,25 @@ function Coursepage() {
           }) : ""
         }
 
-
+<br/>
       </div>
-      <Footer></Footer>
+      <br/>
+      <div className='f1' style={{
+  maxWidth: 10000,
+  height: 0,
+  color: 'white',
+  display: 'flex',
+  flexDirection: 'row',
+  backgroundColor: '#023047'
+}}>
+        
+        <div className='g2'>
+        <img src={img10} style={{width:300 , height:170}}/>
+        </div>
+        <div className='g4'>
+        <img src={img11} style={{width:910 , height:170}}/>
+        </div>
+       </div>
     </div>
   );
 }

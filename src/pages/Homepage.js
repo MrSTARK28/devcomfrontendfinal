@@ -5,6 +5,8 @@ import Footer from "../Components/footer";
 import SelectOptions from "../Components/dropdown2";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import img10 from "../Components/images/footer.jpg"
+import img11 from "../Components/images/feedback.jpg"
 
 function Home(props) {
   const [dept, setDept] = React.useState();
@@ -125,8 +127,27 @@ function Home(props) {
         }
 
       </div> */}
-      <Footer class="max-w-[1920px]" ></Footer>
-    </div>
+      {/* <Footer class="max-w-[1920px]" ></Footer> */}
+    
+    
+    <br/>
+    <div className='f1' style={{
+maxWidth: 10000,
+height: 0,
+color: 'white',
+display: 'flex',
+flexDirection: 'row',
+backgroundColor: '#023047'
+}}>
+      
+      <div className='g2'>
+      <img src={img10} style={{width:300 , height:170}}/>
+      </div>
+      <div className='g4'>
+      <img src={img11} style={{width:910 , height:170}}/>
+      </div>
+     </div>
+  </div>
 
   );
 }
