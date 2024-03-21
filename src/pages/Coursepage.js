@@ -95,7 +95,6 @@ function Coursepage() {
                 <div>Department</div>
               </Link>
             </div>
-           
           </div>
         </div>
       </div>

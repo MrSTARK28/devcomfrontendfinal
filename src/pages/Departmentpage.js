@@ -93,36 +93,9 @@ export default function Department(){
       setFilteredRows(courses.map(item => createData(item.name, item.average_rating)));
     };
   return(
-    <div>
-         <div className="flex flex-col items-center bg-white">
-      <div className="flex justify-center items-center self-stretch px-16 py-5 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
-        {/* <div className="NavName">
-        <div className="flex gap-5 justify-between w-full max-w-[100px] max-md:flex-wrap max-md:max-w-full"></div>
-         <Link to="../"><img
-            loading="lazy"
-            src={logo}
-            className="my-auto  w-[500px] max-md:max-w-full"
-          />
-          </Link>
-          <div className="flex gap-5 justify-content:space-between items-right max-md:flex-wrap max-md:max-w-full">
-            <div className="self-stretch my-auto">
-              <div className="Home">
-              <Link to="../">
-                <div>Home</div>
-              </Link>
-              </div>
-            </div>
-            <div className="flex-auto self-stretch my-auto">
-              <div className="Department">
-              <Link to="../department">
-                <div>Department</div>
-              </Link>
-              </div>
-            </div>
-            </div>
-            
-          </div> */}
-          <div className="flex gap-5 justify-between w-full max-w-[12000px] max-md:flex-wrap max-md:max-w-full">
+        <div>
+          <div className="flex justify-center items-center self-stretch px-16 py-5 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
+        <div className="flex gap-5 justify-between w-full max-w-[1200px] max-md:flex-wrap max-md:max-w-full">
           <Link to="../"><img
             loading="lazy"
             src={logo}
@@ -140,13 +113,11 @@ export default function Department(){
                 <div>Department</div>
               </Link>
             </div>
-            
           </div>
         </div>
-        </div>
-          </div>
+      </div>
         <>
-      <div>
+      <div className='pt-5 '>
         <table style={{ height: 200, marginTop: -10, padding: 100, }}>
           <tr>
             <th><button style={{border:'none'}} onClick={() => handleDepartment('158')}><img src={img1}></img></button></th>

@@ -54,7 +54,6 @@ function Home(props) {
                 <div>Department</div>
               </Link>
             </div>
-            <div className="self-stretch my-auto">Statistics</div>
           </div>
         </div>
       </div>
