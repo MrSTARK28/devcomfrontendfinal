@@ -44,3 +44,34 @@
 .login-scroll {
     overflow: hidden;
 }
+.nav-title{
+    width: 500px;
+    height: 27.26px;
+    flex-shrink: 0;
+    fill: #FFF;
+  }
+  .Home{
+    color: var(--White, #FFF);
+  
+  /* R 20 - */
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .Department{
+    color: var(--White, #FFF);
+  
+  /* R 20 - */
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .NavName{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
