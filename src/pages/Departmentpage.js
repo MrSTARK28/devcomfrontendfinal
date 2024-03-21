@@ -10,7 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import { useState, useEffect } from 'react';
 import logo from "../assets/Title.png";
 import axios from 'axios';
-import img1 from "../Components/images/Department-card1.svg" // ae
+import img1 from "../Components/images/Department-card1.svg" // aex 
 import img2 from "../Components/images/Department-card7.svg" // me 
 import img3 from "../Components/images/Department-card5.svg" //ee
 import img4 from "../Components/images/Department-card4.svg" //cs 
