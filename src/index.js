@@ -12,9 +12,9 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path="/" >
-      <Route index element={<Home />} />
+      <Route index element={<LoginPage/>} />
       <Route path="/dept/:duid/course/:cuid" element={<Coursepage></Coursepage>} />
-      <Route path="/login" element={<LoginPage/>} />
+      <Route path="/home" element={<Home />} />
       <Route path="/department" element={<Department/>} />
     </Route>
   </Routes> 

@@ -79,7 +79,7 @@ function Coursepage() {
     <div className="flex flex-col items-center bg-white">
       <div className="flex justify-center items-center self-stretch px-16 py-5 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
         <div className="flex gap-5 justify-between w-full max-w-[1200px] max-md:flex-wrap max-md:max-w-full">
-          <Link to="../"><img
+          <Link to="../home"><img
             loading="lazy"
             src={logo}
          //   className="my-auto  w-[500px] max-md:max-w-full"
@@ -87,7 +87,7 @@ function Coursepage() {
           </Link>
           <div className="flex gap-5 justify-between items-center max-md:flex-wrap max-md:max-w-full">
             <div className="self-stretch my-auto">
-              <Link to="../">
+              <Link to="../home">
                 <div>Home</div>
               </Link>
             </div>
