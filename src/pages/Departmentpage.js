@@ -20,6 +20,8 @@ import img7 from "../Components/images/Department-card.svg" // chea
 import img8 from "../Components/images/DepartmentCard8.svg" // phy 
 import { Link } from 'react-router-dom';
 import Footer from '../Components/footer';
+import img10 from "../Components/images/footer.jpg"
+import img11 from "../Components/images/feedback.jpg"
 
 // import DeptCard from "./Components/DeptCard"
 //  import DeptDetail from "./Components/DeptDetail"
@@ -185,8 +187,15 @@ export default function Department(){
         />
       </Paper>
     </>
-    <Footer class="max-w-[1920px]" ></Footer>
-    </div>
+    <div className="flex justify-center items-center self-stretch px-16 py-5 inset-x-0 bottom-0 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
+      <div className='g2'>
+      <img src={img10} style={{width:250 , height:120}}/>
+      </div>
+      <div className='g4'>
+      <img src={img11} style={{width:910 , height:120}}/>
+      </div>
+      </div>
+  </div>
   )
 }
 

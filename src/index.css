@@ -2,11 +2,11 @@
 @tailwind components; 
 @tailwind utilities; 
 
-
 .f1{
     max-width: 100%;
+    width: 120wv;
     height: 170px;
-    color: white;
+    color: #023047;
     display: flex;
     flex-direction: row;
     background-color: #023047;

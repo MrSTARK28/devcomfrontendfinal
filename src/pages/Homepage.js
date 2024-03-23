@@ -39,11 +39,8 @@ function Home(props) {
     <div className="flex flex-col items-center bg-white">
       <div className="flex justify-center items-center self-stretch px-16 py-5 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
         <div className="flex gap-5 justify-between w-full max-w-[1200px] max-md:flex-wrap max-md:max-w-full">
-          <Link to="../"><img
-            loading="lazy"
-            src={logo}
-            className="my-auto  w-[500px] max-md:max-w-full"
-          />
+          <Link to="../">
+            <img loading="lazy" src={logo} className="my-auto  w-[500px] max-md:max-w-full"/>
           </Link>
           <div className="flex gap-5 justify-between items-center max-md:flex-wrap max-md:max-w-full">
             <div className="self-stretch my-auto" >
@@ -127,25 +124,16 @@ function Home(props) {
 
       </div> */}
       {/* <Footer class="max-w-[1920px]" ></Footer> */}
-    
-    
-    <br/>
-    <div className='f1' style={{
-maxWidth: 10000,
-height: 0,
-color: 'white',
-display: 'flex',
-flexDirection: 'row',
-backgroundColor: '#023047'
-}}>
-      
+      <br/>
+
+    <div className="flex justify-center items-center self-stretch px-16 py-5 inset-x-0 bottom-0 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
       <div className='g2'>
-      <img src={img10} style={{width:300 , height:170}}/>
+      <img src={img10} style={{width:250 , height:120}}/>
       </div>
       <div className='g4'>
-      <img src={img11} style={{width:910 , height:170}}/>
+      <img src={img11} style={{width:910 , height:120}}/>
       </div>
-     </div>
+      </div>
   </div>
 
   );

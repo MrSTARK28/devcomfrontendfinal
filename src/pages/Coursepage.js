@@ -131,7 +131,7 @@ function Coursepage() {
           <div className="flex flex-col ml-5 w-[37%] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col grow px-14 py-11 w-full text-base leading-8 text-white border border-solid bg-sky-950 border-black border-opacity-30 max-md:px-5 max-md:mt-10">
               <div className="justify-center items-center px-16 py-12 text-4xl text-black whitespace-nowrap bg-blue-300 border border-black border-solid max-md:px-5">
-                CSE
+                {deptName}{code}
               </div>
               <div className="mt-9 tracking-normal">
                 <span className="font-bold text-white">Address: </span>
@@ -195,22 +195,14 @@ function Coursepage() {
 <br/>
       </div>
       <br/>
-      <div className='f1' style={{
-  maxWidth: 10000,
-  height: 0,
-  color: 'white',
-  display: 'flex',
-  flexDirection: 'row',
-  backgroundColor: '#023047'
-}}>
-        
-        <div className='g2'>
-        <img src={img10} style={{width:300 , height:170}}/>
-        </div>
-        <div className='g4'>
-        <img src={img11} style={{width:910 , height:170}}/>
-        </div>
-       </div>
+      <div className="flex justify-center items-center self-stretch px-16 py-5 inset-x-0 bottom-0 w-full text-xl text-white whitespace-nowrap bg-sky-950 max-md:px-5 max-md:max-w-full">
+      <div className='g2'>
+      <img src={img10} style={{width:250 , height:120}}/>
+      </div>
+      <div className='g4'>
+      <img src={img11} style={{width:910 , height:120}}/>
+      </div>
+      </div>
     </div>
   );
 }
